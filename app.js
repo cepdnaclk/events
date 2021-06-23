@@ -120,6 +120,8 @@ function processData(data) {
     // console.log(finalArray);
 
     fillTable(finalArray);
+    document.getElementById("loading").style.display = 'none'
+    document.getElementById("category").style.opacity = 1;
 }
 
 // add a row to the table
@@ -165,32 +167,27 @@ function refreshTable() {
     cleanTable();
     processData(fetchedData);
 }
-
 // filter button click event section
 function allData() {
     filterArray = [1, 1, 1, 1];
     refreshTable(); 
     return false;
 }
-
 function researchSeminar() {
     filterArray = [1, 0, 0, 0];
     refreshTable(); 
     return false;
 }
-
 function competitions() {
     filterArray = [0, 1, 0, 0];
     refreshTable(); 
     return false;
 }
-
 function conferences() {
     filterArray = [0, 0, 1, 0];
     refreshTable(); 
     return false;
 }
-
 function workshops() {
     filterArray = [0, 0, 0, 1];
     refreshTable(); 
@@ -218,7 +215,20 @@ $(document).ready(function () {
         }
     });
 
-    setTimeout(()=>{
-        document.getElementById("loading").style.display = 'none'
-    }, 1000)
+   
 });
+
+
+$(document).ready(function() {
+  
+    $(".selLabel").click(function () {
+      $('.dropdown').toggleClass('active');
+    });
+    
+    $(".dropdown-list li").click(function() {
+      $('.selLabel').text($(this).text());
+      $('.dropdown').removeClass('active');
+      $('.selected-item p span').text($('.selLabel').text());
+    });
+    
+  });
