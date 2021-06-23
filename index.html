@@ -1,141 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .dropbtn {
-        background-color: white;
-        color: blcak;
-        
-        padding: 16px;
-        font-size: 16px;
-        border: collapse;
-        }
 
-        .dropdown {
-        position: relative;
-        display: inline-block;
-        }
-
-        .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        }
-
-        .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        }
-
-        .dropdown-content a:hover {background-color: #ddd;}
-
-        .dropdown:hover .dropdown-content {display: block;}
-
-        .dropdown:hover .dropbtn {background-color: #676867;}
-
-    </style>
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./dropddown.css">
+    <link rel="stylesheet" href="./infobutton.css">
+    <link rel="stylesheet" href="./types.css">
+    <link rel="stylesheet" href="./loadingScreen.css">
+    <script src="https://kit.fontawesome.com/f1c65451e4.js" crossorigin="anonymous"></script>
+</head>
 
 <body>
-    <p>
-    <h1>Events Calendar</h1>
-    </p>
-       
-    <!-- Buttons for categories and registration form -->
 
+    <div id = "loading" class= 'loading_screen'>
+        <div class="arc">
+        </div>
+        <h1><span>LOADING</span></h1>
+    </div>
 
-    <table >
-        <colgroup>
-            <col span="1" style="width: 80%">
-            <col span="1" style="width: 10%">
-        </colgroup>
-        <tbody>
-            <tr>
-                <!-- Browse categories -->
-                <td>
-                    
-                    <div class="dropdown">
-                        <button class="dropbtn"><h3 style="font-family: 'Times New Roman'; font-size: 20px;">Categories</h3></button>
-                        <div class="dropdown-content">
-                          <a onclick='return allData()'>All</a>
-                          <a onclick='return researchSeminar()'>Research Seminars</a>
-                          <a onclick='return conferences()'>Conferences</a>
-                          <a onclick='return competitions()'>Competitions</a>
-                          <a onclick='return workshops()'>Workshops</a>
+    <div class="heading">
+        <img src="./images/logo-2.png" alt="">
+        <label>Events Calendar</label>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="table_div">
+        <table>
+            <colgroup>
+                <col span="1" style="width: 80%">
+                <col span="1" style="width: 10%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button>Categories</button>
+                            <ul class="dropdown-options">
+                                <li class="option">
+                                    <a onclick='return allData()'>All</a>
+                                </li>
+                                <li class="option">
+                                    <a onclick='return researchSeminar()'>Research Seminars</a>
+                                </li>
+                                <li class="option">
+                                    <a onclick='return conferences()'>Conferences</a>
+                                </li>
+                                <li class="option">
+                                    <a onclick='return competitions()'>Competitions</a>
+                                </li>
+                                <li class="option">
+                                    <a onclick='return workshops()'>Workshops</a>
+                                </li>
+                            </ul>
                         </div>
-                      </div>
-                </td>        
+                    </div>
+                </tr>
+            </tbody>
+        </table>
 
-                
-            </tr>
-            
-        </tbody>
-    </table>  
-    
-    <p></p>
+        <div class = "topicTable_div">
+            <table id="eventTable" class="topicTable" align="center">
 
-    <table id="eventTable" class="topicTable" align="center" >
-       
-        <tbody>
-            <tr>
-                <th>
-                    <h2 style="text-align:center;">Type</h2>
-                </th>
+                <tbody>
+                    <tr>
+                        <th>
 
-                <th>
-                    <h2 style="text-align:center;">Date</h2>
-                </th>
+                        </th>
+                        <th>
+                            <label>Type </label>
+                        </th>
 
-                <th>
-                    <h2 style="text-align:center;">Time (IST)</h2>
-                </th>
+                        <th>
+                            <label>Date</label>
+                        </th>
 
-                <th>
-                    <h2 style="text-align:center;">Event Description</h2>
-                </th>     
+                        <th>
+                            <label>Time (IST)</label>
+                        </th>
 
-                <th>
-                    <h2 style="text-align:center;">Link</h2>
-                </th>                           
+                        <th>
+                            <label>Event Description </label>
+                        </th>
 
-                <th>
-                    <h2 style="text-align:center;">Details</h2>
-                </th>
-            </tr>
+                        <th>
+                            <label>Link</label>
+                        </th>
 
-        </tbody>
+                        <th>
+                            <label>Details</label>
+                        </th>
+                    </tr>
 
-    </table>
+                </tbody>
 
-    <style>
-        .topicTable {
-          font-family: 'Times New Roman', Times, serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        
-        .topicTable td, .topicTable th {
-          border: 1px solid black;
-          text-align: left;
-          padding: 8px;
-        }
-        
-        tr:nth-child(even) {
-          background-color: #dddddd;
-        }
-    </style>
+            </table>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
 
 
 </body>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src='app.js'></script>
+<script src='dropdown.js'></script>
 
 
 </html>

@@ -1,0 +1,128 @@
+@font-face{
+    font-family: "roboto";
+    src: url('./fonts/RobotoCondensed-Regular.ttf');
+}
+
+body{
+    width: 100%;
+    font-family:roboto;
+    margin:0;  
+}
+
+
+.dropbtn {
+    background-color: rgb(232, 240, 238);
+    padding: 16px;
+    font-size: 16px;
+    border: 3px solid rgb(106, 177, 199);
+    border-radius: 10px;
+    outline: none
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition-duration: 200ms;
+}
+
+.dropdown-toggle{
+    display: none;
+}
+
+.dropdown-toggle:checked+div{
+    background-color:red;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #b6bbb6;}
+
+
+.heading{
+    display: flex;
+    width:100vw;
+    background-color:rgb(223, 223, 223);
+
+    color: rgb(110, 135, 146);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    align-items: start;
+}
+
+.heading label{
+    padding-left:20%;
+    font-size: 35px;
+}
+
+
+
+.topicTable {
+    border-collapse: collapse;
+    width: 100%;
+    overflow:scroll;
+}
+
+tr {
+    background:rgb(204, 211, 212);
+}
+
+
+
+.topicTable td,
+.topicTable th {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #e8f0f5;
+}
+
+tr:hover :first-child{
+    opacity: 0.5;
+}
+
+/* tr:nth-child(even):hover {
+    background:rgb(200, 217, 219);
+} */
+
+@media only screen and (max-width: 750px) {
+   .heading{
+       width: 100%;
+       padding-top: 10%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+   
+   .heading label {
+    padding: 0;
+    margin-top: 1%;   
+   }
+}
+
+.table_div{
+    /* overflow:scroll; */
+    padding: 10px;
+}
+
+.topicTable_div{
+    overflow:scroll;
+}

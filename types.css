@@ -1,0 +1,33 @@
+
+.type{
+    
+    padding:0 !important;    
+    background-color:rgb(0, 0, 0);
+    animation: color_anim 500ms linear ;
+}
+
+.type.WorkShop{
+    background-color:rgb(207, 16, 96);
+}
+
+.type.ResearchTalk{
+    background-color:rgb(99, 16, 207);
+}
+
+.type.Conference{
+    background-color:rgb(16, 207, 134);
+}
+
+.type.Competition{
+    background-color:rgb(204, 207, 16);
+}
+
+@keyframes color_anim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+

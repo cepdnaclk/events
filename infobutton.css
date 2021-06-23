@@ -1,0 +1,14 @@
+.info_button{
+    background:rgb(8, 180, 223) ;
+    color:white;
+    border-radius: 5px;
+    outline:none;
+    transition-duration: 200ms;
+    border: none;
+    border-bottom: 6px solid rgba(255, 255, 255, 0.089);
+}
+
+.info_button:hover{
+    background:rgb(20, 167, 204) ;
+    border-bottom: 6px solid rgb(3, 255, 234);
+}
