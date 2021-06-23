@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="./infobutton.css">
     <link rel="stylesheet" href="./types.css">
     <link rel="stylesheet" href="./loadingScreen.css">
+    <link rel="stylesheet" href="./whatsapp.css">
     <script src="https://kit.fontawesome.com/f1c65451e4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <div id = "loading" class= 'loading_screen'>
+    <div id="loading" class='loading_screen'>
         <div class="arc">
         </div>
         <h1><span>LOADING</span></h1>
@@ -25,37 +26,38 @@
     </div>
 
     
-    <div id = "category" class="category">
+
+    <div id="category" class="category">
         <div class="selected-item">
-          <p>Category : <span>Empty</span></p>
+            <p>Category : <span>All</span></p>
         </div>
-        
+
         <div class="dropdown">
-          <span class="selLabel">Select Category</span>
-          <input type="hidden" name="cd-dropdown">
-          <ul class="dropdown-list">
-            <li data-value="1">
-              <span onclick='return allData()'>All</span>
-            </li>
-            <li data-value="2">
-              <span onclick='return researchSeminar()'>Research Talk</span>
-            </li>
-            <li data-value="3">
-              <span onclick='return conferences()'>Conference</span>
-            </li>
-            <li data-value="4">
-              <span onclick='return competitions()'>Competition</span>
-            </li>
-            <li data-value="5">
-                <span onclick='return workshops()'>Work Shop</span>
-              </li>
-          </ul>
+            <span class="selLabel">Select Category</span>
+            <input type="hidden" name="cd-dropdown">
+            <ul class="dropdown-list">
+                <li data-value="1">
+                    <span onclick='return allData()'>All</span>
+                </li>
+                <li data-value="2">
+                    <span onclick='return researchSeminar()'>Research Talk</span>
+                </li>
+                <li data-value="3">
+                    <span onclick='return conferences()'>Conference</span>
+                </li>
+                <li data-value="4">
+                    <span onclick='return competitions()'>Competition</span>
+                </li>
+                <li data-value="5">
+                    <span onclick='return workshops()'>Work Shop</span>
+                </li>
+            </ul>
         </div>
-      </div>
+    </div>
 
     <div class="table_div">
-        
-        <div class = "topicTable_div">
+
+        <div class="topicTable_div">
             <table id="eventTable" class="topicTable" align="center">
 
                 <tbody>
