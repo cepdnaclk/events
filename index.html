@@ -3,57 +3,57 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./dropddown.css">
-    <link rel="stylesheet" href="./infobutton.css">
-    <link rel="stylesheet" href="./types.css">
-    <link rel="stylesheet" href="./loadingScreen.css">
-    <link rel="stylesheet" href="./whatsapp.css">
+    <link rel="stylesheet" href="./static_files/css/styles.css">
+    <link rel="stylesheet" href="./static_files/css/dropddown.css">
+    <link rel="stylesheet" href="./static_files/css/infobutton.css">
+    <link rel="stylesheet" href="./static_files/css/types.css">
+    <link rel="stylesheet" href="./static_files/css/loadingScreen.css">
+    <link rel="stylesheet" href="./static_files/css/whatsapp.css">
+    <link rel="stylesheet" href="./static_files/css/popup.css">
+    <link rel="stylesheet" href="./static_files/css/tag.css">
     <script src="https://kit.fontawesome.com/f1c65451e4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
     <div id="loading" class='loading_screen'>
         <div class="arc">
         </div>
-        <h1><span>LOADING</span></h1>
+        <h1><span></span></h1>
     </div>
 
+    <img id= "logo" src="./images/logo-2.png" alt="">
     <div class="heading">
-        <!-- <img src="./images/logo-2.png" alt=""> -->
         <label>Events Calendar</label>
     </div>
 
     
-
     <div id="category" class="category">
-        <div class="selected-item">
-            <p>Category : <span>All</span></p>
+    
+        <div id  = "all_tag" class = "tag All">
+            <label >All </label>          
         </div>
 
-        <div class="dropdown">
-            <span class="selLabel">Select Category</span>
-            <input type="hidden" name="cd-dropdown">
-            <ul class="dropdown-list">
-                <li data-value="1">
-                    <span onclick='return allData()'>All</span>
-                </li>
-                <li data-value="2">
-                    <span onclick='return researchSeminar()'>Research Talk</span>
-                </li>
-                <li data-value="3">
-                    <span onclick='return conferences()'>Conference</span>
-                </li>
-                <li data-value="4">
-                    <span onclick='return competitions()'>Competition</span>
-                </li>
-                <li data-value="5">
-                    <span onclick='return workshops()'>Work Shop</span>
-                </li>
-            </ul>
+
+        <div id = "r_tag" class = "tag RTalk">
+            <label >Research Talk </label>
         </div>
+
+        <div id = "w_tag" class = "tag workshop">
+            <label >Workshop</label>
+        </div>
+    
+        <div id = "cn_tag" class = "tag conference">
+            <label >Conference</label>
+        </div>
+        
+        <div id = "cm_tag" class = "tag competition">
+            <label >Competition</label>
+        </div>
+
     </div>
+
+
+
 
     <div class="table_div">
 
@@ -62,11 +62,9 @@
 
                 <tbody>
                     <tr>
+                       
                         <th>
-
-                        </th>
-                        <th>
-                            <label>Type </label>
+                            <label>Tags </label>
                         </th>
 
                         <th>
@@ -99,8 +97,18 @@
 
     </div>
 
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>More Info...</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content" id='popup_content'>
+                Sample Data
+            </div>
+        </div>
+    </div>
 
-
+    <div class= "footer"></div>
+    
 
 
 
@@ -108,7 +116,8 @@
 </body>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src='app.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.js"></script>
+<script src='./static_files/js/app.js'></script>
 <!-- <script src='dropdown.js'></script> -->
 
 

@@ -1,7 +1,8 @@
 .info_button{
     background:rgb(8, 180, 223) ;
     color:white;
-    border-radius: 5px;
+    border-radius: 8px;
+    padding:5px;
     outline:none;
     transition-duration: 200ms;
     border: none;

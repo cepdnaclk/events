@@ -130,8 +130,6 @@ function addRow(rowData, colType) {
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
 
-    row.className = colType ? 'even': 'odd'
-
     row.insertCell(0).innerHTML = ''
     row.children[0].className = 'type ' + rowData['type'].replaceAll(' ', '');
     // console.log(rowData['type'].replaceAll(' ', ''))

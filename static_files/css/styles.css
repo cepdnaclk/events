@@ -1,6 +1,6 @@
 @font-face{
     font-family: "roboto";
-    src: url('./fonts/RobotoCondensed-Regular.ttf');
+    src: url('../../fonts/RobotoCondensed-Regular.ttf');
 }
 
 body{
@@ -21,7 +21,6 @@ body{
 
 .heading{
     display: flex;
-    width:100vw;
     background-color:rgb(223, 223, 223);
 
     color: rgb(33, 47, 53);
@@ -29,6 +28,29 @@ body{
     padding-bottom: 3%;
     align-items: start;
 }
+
+/* .footer{
+    display: flex;
+    background-color:rgb(223, 223, 223);
+    height: 20px;
+    color: rgb(33, 47, 53);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    align-items: start;
+} */
+
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    background-color:rgb(223, 223, 223);
+    color: rgb(33, 47, 53);
+    text-align: center;
+ }
+ 
 
 .heading label{
     padding-left:40%;
@@ -47,7 +69,9 @@ tr {
     background:rgb(204, 211, 212);
 }
 
-
+.emptyRow{
+    background:rgb(255, 255, 255);
+}
 
 .topicTable td,
 .topicTable th {
@@ -65,8 +89,9 @@ tr {
     background:rgb(204, 211, 212);
 }
 
-tr:hover :first-child{
-    opacity: 0.5;
+tr:hover{
+    /* opacity: 0.8; */
+    color:rgb(23, 86, 138);
 }
 
 /* tr:nth-child(even):hover {
@@ -76,14 +101,16 @@ tr:hover :first-child{
 @media only screen and (max-width: 750px) {
    .heading{
        width: 100%;
-       padding-top: 10%;
-        flex-direction: column;
-        overflow: hidden;
+       padding-top: 5%;
+       border-bottom: 10px solid rgb(203, 211, 214);
     }
    
    .heading label {
     padding: 0;
-    margin-top: 1%;   
+   }
+
+   #logo{
+       visibility: hidden;
    }
 }
 
@@ -96,10 +123,10 @@ tr:hover :first-child{
     overflow:scroll;
 }
 
-.category{
-    
-    transform: translateX(-14%) scale(0.7);
-    opacity: 0;
-    width: 100vw;
-    transition-duration: 1s;
+
+#logo{
+    position: absolute;
+    left:40px;
+    top:30px;
+    transform:scale(1.2); 
 }
