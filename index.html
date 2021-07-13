@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./static_files/css/whatsapp.css">
     <link rel="stylesheet" href="./static_files/css/popup.css">
     <link rel="stylesheet" href="./static_files/css/tag.css">
+    <link rel="stylesheet" href="./static_files/css/logo.css">
     <script src="https://kit.fontawesome.com/f1c65451e4.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,80 +22,93 @@
         <h1><span></span></h1>
     </div>
 
-    <img id= "logo" src="./images/logo-2.png" alt="">
+    
+    <div class = "logo">
+        <img src="./images/logo.png" alt="">
+        <div>
+            <label>Department of Computer Engineering </label>
+            <br>
+            <label>Faculty of Engineering <br> University of Peradeniya </label>
+        </div>
+    </div>
+    
     <div class="heading">
+
+
+
+
+
         <label>Events Calendar</label>
+
+        <div id="category" class="category">
+
+            <div id="all_tag" class="tag All">
+                <label>All </label>
+            </div>
+
+
+            <div id="r_tag" class="tag RTalk">
+                <label>Research Talk </label>
+            </div>
+
+            <div id="w_tag" class="tag workshop">
+                <label>Workshop</label>
+            </div>
+
+            <div id="cn_tag" class="tag conference">
+                <label>Conference</label>
+            </div>
+
+            <div id="cm_tag" class="tag competition">
+                <label>Competition</label>
+            </div>
+
+        </div>
     </div>
 
-    
-    <div id="category" class="category">
-    
-        <div id  = "all_tag" class = "tag All">
-            <label >All </label>          
-        </div>
 
 
-        <div id = "r_tag" class = "tag RTalk">
-            <label >Research Talk </label>
-        </div>
+        <div class="table_div">
 
-        <div id = "w_tag" class = "tag workshop">
-            <label >Workshop</label>
-        </div>
-    
-        <div id = "cn_tag" class = "tag conference">
-            <label >Conference</label>
-        </div>
-        
-        <div id = "cm_tag" class = "tag competition">
-            <label >Competition</label>
-        </div>
+            <div class="topicTable_div">
+                <table id="eventTable" class="topicTable" align="center">
 
-    </div>
+                    <tbody>
+                        <tr>
+
+                            <th>
+                                <label>Tags </label>
+                            </th>
+
+                            <th>
+                                <label>Date</label>
+                            </th>
+
+                            <th>
+                                <label>Time (IST)</label>
+                            </th>
+
+                            <th>
+                                <label>Event Description </label>
+                            </th>
+
+                            <th>
+                                <label>Link</label>
+                            </th>
+
+                            <th>
+                                <label>Details</label>
+                            </th>
+                        </tr>
+
+                    </tbody>
+
+                </table>
 
 
-
-
-    <div class="table_div">
-
-        <div class="topicTable_div">
-            <table id="eventTable" class="topicTable" align="center">
-
-                <tbody>
-                    <tr>
-                       
-                        <th>
-                            <label>Tags </label>
-                        </th>
-
-                        <th>
-                            <label>Date</label>
-                        </th>
-
-                        <th>
-                            <label>Time (IST)</label>
-                        </th>
-
-                        <th>
-                            <label>Event Description </label>
-                        </th>
-
-                        <th>
-                            <label>Link</label>
-                        </th>
-
-                        <th>
-                            <label>Details</label>
-                        </th>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
+            </div>
 
         </div>
-
     </div>
 
     <div id="popup1" class="overlay">
@@ -107,8 +121,8 @@
         </div>
     </div>
 
-    <div class= "footer"></div>
-    
+    <!-- <div class="footer"></div> -->
+
 
 
 

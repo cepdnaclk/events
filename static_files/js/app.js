@@ -197,8 +197,8 @@ function refreshTable() {
         event['visible'] = false;
     });
 
-    console.log('tagarray', tagArray);
-    console.log('fetchedData', fetchedData);
+    // console.log('tagarray', tagArray);
+    // console.log('fetchedData', fetchedData);
 
     // enable the visibility of the filtered tags
     selectedTagArr.forEach((tag) => {

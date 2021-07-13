@@ -16,12 +16,7 @@
 html {
   line-height: 1.2;
 }
-body {
-  background-color: #f5f5f5;
-  color: #333;
-  font-family: "Roboto", arial, sans-serif;
-  font-size: 16px;
-}
+
 .selected-item {
   margin: 20px 0;
   text-align: start;

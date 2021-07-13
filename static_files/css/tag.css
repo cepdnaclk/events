@@ -1,19 +1,26 @@
 .tag{
     display:grid;
     height: 28px;
-    width: auto;
     padding-left:10px;
     padding-right:10px;
-    background: rgb(243, 240, 240);
-    border: 2px solid rgb(130, 173, 180);
-    color:rgb(130, 173, 180);
+    /* background: rgb(243, 240, 240); */
+    border: 2px solid rgba(254, 255, 255, 0.322);
+    color:rgba(254, 255, 255, 0.322);
+    font-weight: bold;;
     border-radius: 20px;
-    margin-top: 10px;
-    margin-right: 10px;
     align-items: center;
+    margin:3px;
     transition-duration: 200ms;
 }
+.tag:hover{
+    border: 2px solid rgba(254, 255, 255, 0.658);
+    color:rgba(254, 255, 255, 0.692);
+}
 
+.tag label{
+    padding:0;
+    font-size:15px;
+}
 
 @keyframes color_anim {
     0%{
@@ -24,13 +31,11 @@
     }
 }
 
-.tag:hover{
-    box-shadow: 0px 0px 10px 0 rgba(14, 46, 36, 0.582);
-}
+
 
 .tag.All {
-    border: 2px solid rgb(44, 71, 75);
-    color:rgb(46, 89, 95);
+    border: 2px solid rgba(254, 255, 255, 0.322);
+    color:rgba(254, 255, 255, 0.322);
 }
 
 
@@ -38,8 +43,8 @@
 .tag.All.active {
     color:rgb(222, 243, 245);
     font-weight: bold;
-    border: 2px solid rgb(25, 28, 31);
-    background-color: rgb(25, 32, 37);
+    border: 2px solid rgb(8, 151, 156);
+    background-color: rgb(6, 45, 77);
 }
 
 
@@ -60,8 +65,8 @@
 .tag.conference.active {
     color:rgb(255, 255, 255);
     font-weight: bold;;
-    border: 2px solid #023e7d;
-    background-color: #023e7d;
+    border: 2px solid #087abd;
+    background-color: #087abd;
 }
 
 .tag.competition.active {
@@ -96,8 +101,8 @@
 .table_tag.workshop{
     background:  #e63946;
 }
-.table_tag.conferece{
-    background:  #023e7d;
+.table_tag.conference{
+    background:  #087abd;
 }
 .table_tag.competition{
     background:  #80b918;
@@ -118,8 +123,13 @@
     display:flex;
     flex-wrap: wrap;
     flex-direction:row;
-    padding: 10px;
-    margin-top: 40px;
+    padding: 5px;
+    border-radius: 100px;
+    border-left: 3px solid rgba(230, 213, 216, 0); 
+    transition-duration: 400ms;
+}
+.category:hover{
+    border-left: 3px solid rgba(230, 213, 216, 0.466); ;
 }
 
 @media only screen and (max-width: 750px) {
