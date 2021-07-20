@@ -1,0 +1,9 @@
+{
+    "date": "2021-08-23",
+    "time": null,
+    "description": "Workshop on Algorithms for Large Data",
+    "additional_info": "<p>This workshop aims to foster collaborations between researchers across multiple disciplines through a set of central questions and techniques for algorithm design for large data. We will focus on topics such as sublinear algorithms, randomized numerical linear algebra, streaming and sketching, and learning and testing.</p>",
+    "link": "https://docs.google.com/forms/d/1VMtDFay1MoiKMAErfkg2ZkAswQQdNWhiDQUKGtPBrzA/edit",
+    "registration": true,
+    "tags": ["workshop"]
+}
