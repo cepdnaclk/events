@@ -1,0 +1,47 @@
+.sub_container{
+    position: absolute;
+    top:120px;
+    right:0px;
+
+    display:flex;
+    flex-direction: row;
+    height:10px;
+    opacity:0;
+   
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:antiquewhite;
+    height:40px;
+    border-radius: 10px;
+    padding:10px;
+    margin-right: 10px;
+    font-size: 15px;
+    outline: none;
+    transition-duration: 100ms;
+}
+
+.button.subscribe{
+    background:#e80000;
+}
+.button:hover{
+    transform:scale(1.05);
+}
+
+.whatsapp{
+    background:#08c708;
+}
+
+.submit{
+    background:rgb(18, 117, 156);
+}
+
+.fab.fa-whatsapp,
+.fas.fa-plus-circle{
+    font-size: 20px;
+    padding-right: 5px;
+}

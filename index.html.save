@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./dropddown.css">
+    <link rel="stylesheet" href="./infobutton.css">
+    <link rel="stylesheet" href="./types.css">
+    <link rel="stylesheet" href="./loadingScreen.css">
+    <link rel="stylesheet" href="./whatsapp.css">
+    <link rel="stylesheet" href="./popup.css">
+    <link rel="stylesheet" href="./tag.css">
+    <script src="https://kit.fontawesome.com/f1c65451e4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	    <div id="loading" class='loading_screen'>
+        <div class="arc">
+        </div>
+        <h1><span>LOADING</span></h1>
+    </div>
+
+    <div class="heading">
+        <!-- <img src="./images/logo-2.png" alt=""> -->
+        <label>Events Calendar</label>
+    </div>
+
+
+    
+    
+    
+    
+    
+    <div id="category" class="category">
+        <!-- <div class="selected-item">
+            <p>Category : <span>All</span></p>
+        </div> -->
+        
+        <div class = "tag All">
+            <label >All </label>          
+        </div>
+
+
+        <div class = "tag RTalk">
+            <label >Research Talk </label>
+        </div>
+
+        <div class = "tag workshop">
+            <label >Workshop</label>
+        </div>
+    
+        <div class = "tag conference">
+            <label >Conference</label>
+        </div>
+        
+        <div class = "tag competition">
+            <label >Competition</label>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="table_div">
+
+        <div class="topicTable_div">
+            <table id="eventTable" class="topicTable" align="center">
+
+                <tbody>
+                    <tr>
+                       
+                        <th>
+                            <label>Tags </label>
+                        </th>
+
+                        <th>
+                            <label>Date</label>
+                        </th>
+
+                        <th>
+                            <label>Time (IST)</label>
+                        </th>
+
+                        <th>
+                            <label>Event Description </label>
+                        </th>
+
+                        <th>
+                            <label>Link</label>
+                        </th>
+
+                        <th>
+                            <label>Details</label>
+                        </th>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+        </div>
+
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>More Info...</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content" id='popup_content'>
+                Sample Data
+            </div>
+        </div>
+    </div>
+
+    <h1 id='test'></h1>
+
+
+
+
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.js"></script>
+<script src='app.js'></script>
+<!-- <script src='dropdown.js'></script> -->
+
+
+</html>

@@ -9,12 +9,29 @@ var fetchedData = new Array();
 var selectedTagArr = []; // contained the selected tags
 var tagArray = [];
 
+// compare date with todays date
+function compDate(date) {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = yyyy + '-' + mm + '-' + dd;
+
+    if (date == "TBA" || date == "tba") {
+        return true;
+    }
+    return (date >= today);
+}
+
 // convert data to object
 function populateData(allText) {
     document.getElementById("loading").style.display = 'none'
-    document.getElementById("category").style.opacity = 1;
-    // console.log(data);
-    // console.log(JSON.parse(data));
+    document.getElementById('sub_container').style.opacity = 1;
+
+    var src = $('#heading').css('background-image');
+    var url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+    console.log(url);
+
     // events = JSON.parse(data)['data'];
 
     // load data from the csv file
@@ -44,20 +61,20 @@ function populateData(allText) {
     lines.forEach((event) => {
         // getting the tags
         var tags = event['tags'].split(',');
-
-        // filling the data array
-        fetchedData.push({
-            'date': event['date'],
-            'time': event['time'],
-            'description': event['description'],
-            'type': "Research Talk",
-            'details': event["additional_info"],
-            'link_text': event["registration"] ? "registration" : "live stream",
-            'link': event['link'],
-            'visible': true,
-            'tags': tags,
-        });
-
+        if (compDate(event['date'])) {
+            // filling the data array
+            fetchedData.push({
+                'date': event['date'],
+                'time': event['time'],
+                'description': event['description'],
+                'type': "Research Talk",
+                'details': event["additional_info"],
+                'link_text': event["registration"] ? "registration" : "live stream",
+                'link': event['link'],
+                'visible': true,
+                'tags': tags,
+            });
+        }
         // console.log(tags);
     });
 
@@ -125,9 +142,9 @@ function addRow(rowData, colType) {
         let child = document.createElement("div")
         child.className = "table_tag " + tag
         child.textContent = (tag == 'competition') ? "CM" :
-                            (tag == 'workshop') ? "W" :
-                            (tag == 'conference') ? "CN" :
-                            (tag == 'researchtalk') ? "RT" : "null";
+            (tag == 'workshop') ? "W" :
+                (tag == 'conference') ? "CN" :
+                    (tag == 'researchtalk') ? "RT" : "null";
         div.appendChild(child)
 
     })
@@ -146,10 +163,10 @@ function addRow(rowData, colType) {
 function addEmptyRow() {
     var table = document.getElementById("eventTable");
     var rowCount = table.rows.length;
-    
+
     var row = table.insertRow(rowCount);
     row.insertCell().innerHTML = ''
-    row.className =  'emptyRow'
+    row.className = 'emptyRow'
 }
 
 // loop and add all the data
@@ -296,24 +313,24 @@ function toggleTag(tagName, tagId) {
 
     if (selectedTagArr.includes(tagName)) {
         selectedTagArr.splice(selectedTagArr.indexOf(tagName), 1)
-    }else {
+    } else {
         selectedTagArr.push(tagName);
     }
-    
+
     document.getElementById("all_tag").className = "tag All"
     document.getElementById(tagId).classList.toggle("active")
-    
+
     // console.log(selectedTagArr)
-    
-    if(selectedTagArr.length == 0){
+
+    if (selectedTagArr.length == 0) {
         selectAll();
-    }else{
+    } else {
         refreshTable()
     }
-    
+
 }
 
-function selectAll(){
+function selectAll() {
     document.getElementById("all_tag").classList.toggle("active")
     document.getElementById("r_tag").className = "tag RTalk"
     document.getElementById("w_tag").className = "tag workshop"
@@ -321,7 +338,7 @@ function selectAll(){
     document.getElementById("cn_tag").className = "tag conference"
 
     //TODO correct the conferece to confetrence
-    selectedTagArr = ["research talk", "workshop", "conference",  "competition"]
+    selectedTagArr = ["research talk", "workshop", "conference", "competition"]
     refreshTable();
     selectedTagArr = [];
 }
