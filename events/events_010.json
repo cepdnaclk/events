@@ -1,0 +1,9 @@
+{
+    "date": "2021-08-04",
+    "time": null,
+    "description": "22nd Max Planck Advanced Course on the Foundations of Computer Science",
+    "additional_info": "<p>The goal of this year's ADFOCS is that people with traditional TCS background learn the continuous optimization techniques which have become indispensable tools for modern graph algorithms, LP solvers, and numerous other applications.Unlike previous ADFOCS, this year the event will take place over the span of three weeks. There will be a talk every day from 16:00-18:00 CEST from July 26 to August 13. We will start with a primer week to learn the very basics of continuous optimization (July 26 - July 30), followed by two weeks of talks by the speakers on more advanced continuous optimization and its use in graph algorithms (August 2 - 13) The event will take place entirely online and there is no cost for registration.This summer school's scope is international, and its goal is to bring together leading researchers with international participants of graduate level and above. </p>",
+    "link": "https://conferences.mpi-inf.mpg.de/adfocs-22/index.html",
+    "registration": true,
+    "tags": ["researchtalk"]
+}
