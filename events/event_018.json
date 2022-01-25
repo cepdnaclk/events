@@ -1,0 +1,9 @@
+{
+    "date": "2022-02-07",
+    "time": null,
+    "description": "FOCS (virtual) workshop on Recent Directions in Machine Learning",
+    "additional_info": "This workshop aims to survey some of the recent advances in machine learning (ML). The focus of the invited talks will be on areas of ML that have received less attention from the theoretical computer science community so far but have a potential for benefiting from more theory work.</p>",
+    "link": "https://sites.google.com/view/focs2021ml/home",
+    "registration": true,
+    "tags": ["workshop"]
+}
