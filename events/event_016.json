@@ -1,0 +1,10 @@
+{
+    "date": "2022-02-22",
+    "time": "09:00",
+    "description": "PyCon Sri Lanka is the largest online conference for the Python community to meet and learn from each other. PyCon Sri Lanka is for Python enthusiasts of all experience levels, from new users to professionals.",
+    "additional_info": "<p>Hosting the first-ever large scale PyCon conference in Sri Lanka, we bring together several prominent speakers with vast experience in Python. The speakers are both international and local with specialized knowledge on Python and its applications. They will guide you on three Python tracks: Python in General, Python for Web, and Python in Data.</p>",
+    "link": "https://pycon.lk/",
+    "registration": true,
+    "tags": ["conference"]
+    
+}

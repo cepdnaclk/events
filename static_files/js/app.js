@@ -338,7 +338,7 @@ function selectAll() {
     document.getElementById("cn_tag").className = "tag conference"
 
     //TODO correct the conferece to confetrence
-    selectedTagArr = ["research talk", "workshop", "conference", "competition"]
+    selectedTagArr = ["researchtalk", "workshop", "conference", "competition"]
     refreshTable();
     selectedTagArr = [];
 }
@@ -346,7 +346,7 @@ function selectAll() {
 
 
 document.getElementById("r_tag").addEventListener('click', () => {
-    toggleTag("research talk", "r_tag")
+    toggleTag("researchtalk", "r_tag")
 })
 
 document.getElementById("w_tag").addEventListener('click', () => {
