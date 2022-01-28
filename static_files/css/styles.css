@@ -49,7 +49,7 @@ input[type='checkbox'] {
     padding: 0 40px 0 50px;
   }
 } */
-@media (max-width: 950px) {
+@media (max-width: 920px) {
   .menu-btn {
     display: block;
   }
@@ -62,7 +62,7 @@ input[type='checkbox'] {
     left: -100%;
     background: rgb(23, 86, 138);
     height: 100vh;
-    width: 50%;
+    width: 200px;
     text-align: center;
     display: block;
     transition: all 0.3s ease;
@@ -87,6 +87,17 @@ input[type='checkbox'] {
     background: none;
     color: black;
   }
+  #sub_container{
+    position: fixed;
+    top:80px;
+    left:100px;
+
+    display:flex;
+    flex-direction: row;
+    height:5px;
+    opacity:0;
+   
+}
 }
 
 /* .footer{
