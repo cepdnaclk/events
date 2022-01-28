@@ -88,10 +88,9 @@ input[type='checkbox'] {
     color: black;
   }
   #sub_container{
-    position: fixed;
+    position: absolute;
     top:80px;
     left:100px;
-
     display:flex;
     flex-direction: row;
     height:5px;
