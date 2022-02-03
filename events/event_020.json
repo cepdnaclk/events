@@ -1,9 +1,9 @@
 {
-    "date": "2022-01-28",
-    "time": "19:00",
-    "description": "IEEE CS TechX",
-    "additional_info": "<p>𝐓𝐞𝐜𝐡𝐗 is a virtual event that combines sessions on emerging technologies, soft skills development, leadership and industry engagement as a single offering. It consists of 5 elements; Tech, Train, Lead, Connect & Pitch.</p>",
-    "link": "https://bit.ly/TechX-Registration",
+    "date": "2022-02-23",
+    "time": null,
+    "description": "Google Hashcode",
+    "additional_info": "<p>Google’s team-based programming competition, Hash Code, allows you to share your skills and connect with other coders as you work together to solve a problem modeled off a real Google engineering challenge! In small teams of two to four, coders all over the world will tackle the first problem through Qualification Round. Though this round is hosted online, teams can come together virtually to compete side-by-side in locally coordinated Hash Code Hubs. The top teams from this round are invited to join us for the virtual World Finals.</p>",
+    "link": "https://codingcompetitions.withgoogle.com/hashcode",
     "registration": true,
-    "tags": ["workshop"]
+    "tags": ["competition"]
 }
